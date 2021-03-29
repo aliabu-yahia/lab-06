@@ -1,0 +1,23 @@
+{
+  "name": "lab-06",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aliabu-yahia/lab-06.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/aliabu-yahia/lab-06/issues"
+  },
+  "homepage": "https://github.com/aliabu-yahia/lab-06#readme",
+  "dependencies": {
+    "jquery": "^3.6.0"
+  }
+}

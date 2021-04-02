@@ -41,8 +41,8 @@ function weatherReq(req,res){
 }
 
 function Data(datas) {
-    this.forecast=datas.weater.description;
-    this.time=dats.datetime;
+    this.forecast=datas.weather.description;
+    this.time=datas.datastime;
 }
 
 

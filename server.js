@@ -1,6 +1,6 @@
 'use strict';
 
-require('dotnev').config();
+require('dotenv').config();
 
 const express=require('express')
 const cors =require('cors')
@@ -16,14 +16,18 @@ app.get('/weather', weatherReq)
 
 function locationReq(req,res){
     const info= require('./data/location.json')
-    const location=new Location(info)
+    const location=new Location(info) 
+    if(!location){
+        res.status(500).send("Sorry, something went wrong")
+    }else{
     res.send(location)
+}
 }
 
 function Location(datas) {
-    this.search_querry='Lynnwood'
+    this.search_querry= datas.city
     this.formatted_querry= datas[0].display_name;
-    this.latitude=dates[0].lat;
+    this.latitude=datas[0].lat;
     this.longitude= datas[0].lon;
 }
 
@@ -40,5 +44,10 @@ function Data(datas) {
     this.forecast=datas.weater.description;
     this.time=dats.datetime;
 }
+
+
+app.listen(PORT,()=>{
+console.log('hi');
+});
 
 
